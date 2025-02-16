@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protégé IGDTUW</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="bg-image">
+    <div class="navbar">
+        <nav class="container1 header-dark sticky-nav">
+            <a class="active" href="/" aria-current="page">
+                <p class="webtitle">Protégé IGDTUW</p>
+                <img src="https://ugc.production.linktr.ee/JmiwgCvTQ3GSLSD4v409_jTsTFr71r3y0GYkv?io=true&size=avatar-v3_0" alt="Logo" class="logo">
+            </a>
+            <ul>
+                <li><div class="nav1"><a href="index.html">🏠 Home</a></div></li>
+                <li><div class="nav1"><a href="#events">📅 Events</a></div></li>
+                <li><div class="nav1"><a href="#projects">🚀 Projects</a></div></li>
+                <li><div class="nav1"><a href="#faq">💬 FAQ's</a></div></li>
+                <li><div class="nav1"><a href="#team">👥 Meet our team</a></div></li>
+            </ul>
+        </nav>
+    </div> 
+    
+
+    <div class="content">
+        <p>
+            <h1 style="background-color: rgba(0,0,0,0.5); font-size: 3rem; font-weight:500px; font-family: 'Poppins'">Welcome To Protégé- The Mentorship Society of IGDTUW</h1>
+        </p>
+    </div>  
+    </div>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h1 class="text">ABOUT US</h1>
+    </section>
+
+  <!-- Mission, Objective, Vision Section -->
+  <section class="cont">
+    <div class="row">
+    <!-- Mission Card -->
+    <div class="column">
+        <div class="card">
+        <h3 style="padding: 5px"><i class="fa fa-bullseye"></i> AIM </h3>
+        <p>
+            Our aim is to create a collaborative space for students to explore their interests with hands-on experiences that contribute to their personal and professional growth. 
+            By encouraging a culture of learning and leadership, we strive to transform potential into excellence.
+        </p>
+        </div>
+    </div>
+    <!-- Objective Card -->
+    <div class="column">
+        <div class="card">
+        <h3 style="padding: 5px"><i class="fa fa-crosshairs"></i> TARGET</h3>
+        <p>
+           We focus on empowering students with practical knowledge and real-world exposure through workshops, events, and collaborative projects with an environment where they can build meaningful connections, 
+            and confidently navigate their professional journeys.
+        </p>
+        </div>
+    </div>
+    <!-- Vision Card -->
+    <div class="column">
+        <div class="card">
+        <h3 style="padding: 5px"><i class="fa fa-lightbulb"></i> OUTLOOK</h3>
+        <p>
+            We envision a society where students are equipped with the knowledge, confidence, and networks they need to thrive in an ever-evolving world. 
+            Our goal is to inspire students to take initiative, embrace challenges, and become change-makers in their respective fields. 
+        </p>
+        </div>
+    </div>
+    </div>
+    <!-- </div> -->
+  </section>
+
+    <footer class="footer">
+        <!-- <div class="logo">
+            <img src="https://ugc.production.linktr.ee/JmiwgCvTQ3GSLSD4v409_jTsTFr71r3y0GYkv?io=true&size=avatar-v3_0" alt="Protege Logo" class="logo" />
+        </div> -->
+
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="https://ugc.production.linktr.ee/JmiwgCvTQ3GSLSD4v409_jTsTFr71r3y0GYkv?io=true&size=avatar-v3_0" alt="Protégé Logo" class="footer-logo">
+                <div class="contact-info">
+                    <p><strong>Get In Touch:</strong></p>
+                    <p>protégéigdtuw@gmail.com</p>
+                </div>
+            </div>
+     
+    
+            <div class="footer-social">
+                <h4>Connect With Us On:</h4><br>
+
+                <div class="logos">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/protege_mentorship/?igshid=YmMyMTA2M2Y%3D" class="btn btn-outline-primary btn-lg m-2" target="_blank">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/company/protegeigdtuw/" class="btn btn-outline-info btn-lg m-2" target="_blank">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <!-- X -->
+                    <a href="https://x.com/protege_igdtuw" class="btn btn-outline-info btn-lg m-2" target="_blank">
+                        <i class="bi bi-twitter-x"></i> 
+                    </a>
+                    <!-- WhatsApp -->
+                    <a href="https://chat.whatsapp.com/Fx9wzmICF9I3mG62q3QNbI" class="btn btn-outline-info btn-lg m-2" target="_blank">
+                        <i class="bi bi-whatsapp"></i> 
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    <!-- <border></border> -->
+    <div class="footer-bottom">
+        Made with <span class="heart">&hearts;</span> by Protégé IGDTUW
+        <p>
+        © Protégé IGDTUW 2025 | All rights reserved.
+        </p>
+    </div>
+    </footer>
+      
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
+        }
+
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Hide all sections
+                document.querySelectorAll('section').forEach(sec => {
+                    sec.classList.remove('visible');
+                    sec.classList.add('hidden-section');
+                });
+
+                // Show the selected section
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                targetSection.classList.remove('hidden-section');
+                targetSection.classList.add('visible');
+
+                window.scrollTo({
+                    top: targetSection.offsetTop - 60,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
