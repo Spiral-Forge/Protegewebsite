@@ -283,26 +283,23 @@ body {
     padding: 15px;
   }
  
-  /* Description style */
-.description {
+ .description{
     text-align: center;
     font-weight: 200;
     align-items: center;
     display: flex;
     color: #ffff;
     font-size: 1.25rem;
-    background: #385170;
+    background:  #385170;
     padding: 10px;
     border-radius: 10px;
 }
 
-/* Container style */
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Main Title for team section */
 .main-title {
     text-align: center;
     font-size: 2rem;
@@ -310,14 +307,12 @@ body {
     color: #142d4c;
 }
 
-/* Section title style */
 .section-title {
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 2rem;
 }
 
-/* Grid for tech leads */
 .leads-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -326,7 +321,6 @@ body {
     margin: 0 auto 4rem;
 }
 
-/* Lead card styling */
 .lead-card {
     background: black;
     border-radius: 12px;
@@ -339,7 +333,6 @@ body {
     transform: translateY(-5px);
 }
 
-/* Grid for team members */
 .members-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -348,7 +341,7 @@ body {
     margin: 0 auto 2rem;
 }
 
-/* Centered layout for middle 3 members */
+/* New centered section for the middle 3 members */
 .centered-members {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -358,7 +351,6 @@ body {
     justify-content: center;
 }
 
-/* Card image styling */
 .card-image {
     width: 100%;
     aspect-ratio: 1;
@@ -376,89 +368,80 @@ body {
     transform: scale(1.05);
 }
 
-/* Member name styling */
 .name {
     padding: 1rem;
     text-align: center;
     font-size: 1.1rem;
 }
 
-/* Link styling */
-a {
+a{
     color: #f9f3f3;
     text-decoration: none;
     transition: all 0.3s ease; 
 }
 
-a:hover {
+a:hover{
     color: #0077b5;
 }
 
-/* Member card styling */
-.member-card {
+.member-card{
     background: black;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Media Queries for responsive design */
-
-/* For screens smaller than 1024px (Tablets) */
 @media (max-width: 1024px) {
     .members-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-
+    
     .centered-members {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* For screens smaller than 768px (Mobile devices) */
 @media (max-width: 768px) {
     .leads-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
     }
-
+    
     .members-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
+    
     .centered-members {
         grid-template-columns: repeat(2, 1fr);
         max-width: 600px;
     }
-
+    
     .main-title {
         font-size: 1.5rem;
     }
 }
 
-/* For screens smaller than 480px (Very small screens) */
 @media (max-width: 480px) {
     body {
         padding: 1rem;
     }
-
+    
     .members-grid {
         grid-template-columns: 1fr;
         max-width: 300px;
         margin: 0 auto;
     }
-
+    
     .centered-members {
         grid-template-columns: 1fr;
         max-width: 300px;
     }
-
+    
     .lead-card {
         max-width: 300px;
         margin: 0 auto;
     }
 }
-
   
 /* Neon Glitch Effect */
 .glitch {
