@@ -283,7 +283,7 @@ body {
     padding: 15px;
   }
  
- .description{
+  .description{
     text-align: center;
     font-weight: 200;
     align-items: center;
@@ -442,6 +442,7 @@ a:hover{
         margin: 0 auto;
     }
 }
+
   
 /* Neon Glitch Effect */
 .glitch {
