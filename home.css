@@ -753,7 +753,7 @@ nav a {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: #fff;
     line-height: 1;
     cursor: pointer;
     transition: color .3s ease, text-decoration .3s ease;
