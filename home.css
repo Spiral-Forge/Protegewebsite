@@ -1001,3 +1001,35 @@ footer .heart {
     margin-right: 10px;
     margin-left: 50px;
 }
+
+
+h2 {
+    font-size: 28px;
+    color: #142d4c;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease-in-out;
+  
+  }
+  
+  h2:hover {
+    color: #fdbb2d;
+    
+  }
+  h1 {
+    font-size: 2.5rem;
+    color:  #142d4c;
+
+
+}
+#projects {
+    padding: 50px 20px;
+    text-align: center;
+    
+    max-width: 800px;
+    margin: 50px auto;
+    
+}
