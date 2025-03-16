@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Revamp</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+         /* CSS styles remain unchanged */
+         body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #9fd3c7;
+            background-size: 600% 600%;
+            animation: gradientBG 10s ease infinite;
+            color: #ececec;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .logo {
+            height: 52px;
+            width: 52px;
+            margin-right: 5px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Outfit, sans-serif;
+        }
+
+        img {
+            overflow-clip-margin: content-box;
+            overflow: clip;
+        }
+
+        nav.container1 p {
+            color: #edf2f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .webtitle {
+            font-weight: 700;
+            font-size: 22px;
+            color: #edf2f2;
+            margin: 0;
+            display: inline;
+        }
+
+        nav a {
+            flex-wrap: wrap;
+            color: #fff;
+            margin-right: auto;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            line-height: 1;
+            cursor: pointer;
+            transition: color .3s ease, text-decoration .3s ease;
+            background-color: transparent;
+        }
+
+        .header-dark {
+            background-color: rgb(2,0,36)131f !important;
+            color: #fff !important;
+        }
+
+        nav {
+            width: 100%;
+            background-color: rgb(2,0,36);
+            font-size: 14px;
+            padding: 2px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid rgb(2,0,36);
+            z-index: 10;
+            max-width: 1200px;
+            margin: 10px auto 0;
+            border-radius: 10px;
+        }
+
+        ul {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+            unicode-bidi: isolate;
+        }
+
+        nav .logo {
+            margin-left: 30px;
+            margin-right: 20px;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        div {
+            display: block;
+            unicode-bidi: isolate;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 5px 20px;
+            font-size: 16px;
+            color: #fff;
+            position: relative;
+            transition: transform .2s ease-in-out;
+        }
+
+        .hidden-section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .visible {
+            display: block;
+            opacity: 1;
+        }
+
+        .carousel, .grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .event-item, .project-item, .team-member {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            color: #ececec;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .event-item:hover, .project-item:hover, .team-member:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        footer {
+            background-color: rgb(2,0,36);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            top: 960px;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        footer .heart {
+            color: red;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                background-color: rgba(20, 45, 76, 0.9);
+                position: absolute;
+                width: 100%;
+            }
+
+            nav ul li {
+                margin: 0 15px;
+                text-align: center;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+                margin: 10px;
+            }
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #385170, #142d4c);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background: linear-gradient(45deg, #fdbb2d, #b21f1f);
+        }
+
+        .team-members {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .team-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            color: white;
+            background-color: #385170;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="container1 header-dark sticky-nav">
+        <a class="active" href="/" aria-current="page">
+            <p class="webtitle">Protege</p>
+            <img src="https://ugc.production.linktr.ee/JmiwgCvTQ3GSLSD4v409_jTsTFr71r3y0GYkv?io=true&size=avatar-v3_0" alt="Logo" class="logo">
+        </a>
+        <ul>
+            <li><div class="nav1"><a href="#home">🏠 Home</a></div></li>
+            <li><div class="nav1"><a href="#events">📅 Events</a></div></li>
+            <li><div class="nav1"><a href="#projects">🚀 Projects</a></div></li>
+            <li><div class="nav1"><a href="#faq">💬 FAQ's</a></div></li>
+            <li><div class="nav1"><a href="#team">👥 Meet our team</a></div></li>
+        </ul>
+    </nav>
+
+  <section>
+    <div class="container">
+        <h1>About Resume Revamp: </h1>
+        <h3>Crafting a Winning Resume to Land Your Dream Job</h3>
+
+        <p>Your resume isn’t just a piece of paper — it’s your <span class="highlight">personal brand statement</span>! Think of it as your golden ticket to standing out in a sea of applicants. With the right structure, language, and design, it becomes a <span class="highlight">powerful tool</span> to showcase your value, impress recruiters, and land the opportunities you’ve been working toward.</p>
+        
+        <h2>Why Resume Revamp Matters</h2>
+        <p>Recruiters spend an average of <span class="highlight">6 to 10 seconds</span> skimming a resume before deciding whether to move forward. Your resume must clearly communicate:</p>
+        <ul>
+            <li>Who you are</li>
+            <li>What you’ve done</li>
+            <li>Why you’re the best fit for the job</li>
+        </ul>
+        
+        <h2>What You’ll Learn in This Blog Series</h2>
+        <ul>
+            <li><strong>The Essentials of Resume Structuring:</strong> Learn the must-have sections and formatting tips.</li>
+            <li><strong>Leveraging Overleaf for Professional Design:</strong> Discover how to use LaTeX for a polished resume.</li>
+            <li><strong>Understanding ATS (Applicant Tracking Systems):</strong> Optimize your resume to pass automated filters.</li>
+            <li><strong>Showcasing Technical Skills:</strong> Highlight your projects, certifications, and expertise effectively.</li>
+            <li><strong>Tailoring Your Resume for Different Roles:</strong> Learn how to customize your resume for specific job applications.</li>
+        </ul>
+        
+        <div class="cta">
+            <a href="#">Start Your Resume Revamp Now</a>
+        </div>
+    </div>
+
+</section>
+    
+    <footer>
+        Made with <span class="heart">&hearts;</span> by Protégé IGDTUW
+    </footer>
+
+    
+   
+</body>
+</html>
