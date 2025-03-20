@@ -1,0 +1,82 @@
+/* General Page Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8fd0c9; /* Matching FAQ page background */
+}
+
+/* Navigation Bar */
+nav {
+    background: #222;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    color: #f39c12;
+}
+
+/* FAQ Section */
+.faq-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #8fd0c9;
+    text-align: center;
+}
+
+.faq-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* FAQ Items */
+.faq {
+    background-color: #213a5a;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    font-size: 14px;
+    background-color: #1b2c48;
+}
+
+/* Icons */
+.faq-question i {
+    transition: transform 0.3s;
+}
