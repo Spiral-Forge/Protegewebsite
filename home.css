@@ -15,8 +15,8 @@
 
 /* Full Page Background */
 body {
-    background: linear-gradient(135deg, #001f3f 0%, #005b96 100%);
-    color: white;
+    background: #f8f9fa;
+    color: #2c3e50;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     margin: 0;
@@ -57,33 +57,34 @@ body {
     text-align: left;
 }
 
-/* Glitch Text Effect */
+/* Welcome Text */
 .glitch-text {
     font-size: 5rem;
-    font-weight: 1000;
+    font-weight: 900;
     text-transform: uppercase;
-    color: var(--neon-green);
-    text-shadow: 0px 0px 10px var(--neon-green), 0px 0px 20px var(--neon-blue);
-    animation: glitch 1.5s infinite alternate;
+    color: #2c3e50;
+    margin-bottom: 20px;
 }
 
 .glitch-text span {
-    color: var(--neon-blue);
+    color: #142d4c;
+    font-weight: 1000;
 }
 
-/* Neon Subtitle */
+/* Subtitle */
 .neon-subtitle {
     font-size: 1.3rem;
-    color: #142d4c;
-    text-shadow: 0px 0px 15px var(--neon-blue);
+    color: #385170;
+    margin-bottom: 15px;
 }
 
-/* Cyber Quote */
+/* Quote */
 .cyber-quote {
     font-style: italic;
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #6c757d;
     margin-top: 10px;
+    margin-bottom: 25px;
 }
 
 /* Glitch Animation */
@@ -103,22 +104,24 @@ body {
 .cyber-button {
     padding: 12px 30px;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase;
-    border: 2px solid var(--border-glow);
-    border-radius: 50px;
-    background: var(--glass-bg);
-    color: white;
+    border: 2px solid #142d4c;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #142d4c;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     position: relative;
     text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .cyber-button:hover {
-    background: var(--neon-green);
-    color: black;
-    box-shadow: 0px 0px 15px var(--neon-green);
+    background: #142d4c;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateY(-1px);
 }
 
 /* Right Side: Mentor Image */
@@ -192,10 +195,8 @@ body {
 }
 
 body {
-    background: linear-gradient(135deg, #003300, #001a00, #002200);
-    background-size: 300% 300%;
-    animation: gradientBG 6s infinite alternate;
-    color: var(--text-color);
+    background: #f8f9fa;
+    color: #2c3e50;
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
@@ -234,14 +235,17 @@ body {
     padding: 18px;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
   }
   
   .faq-item:hover {
     background: #142d4c; 
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
   }
   
   
@@ -257,7 +261,7 @@ body {
   .faq-toggle {
     font-size: 26px;
     font-weight: bold;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .faq-item.active .faq-toggle {
@@ -275,12 +279,14 @@ body {
     margin-top: 8px;
     font-size: 18px;
     line-height: 1.5;
-    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
   }
   
   .faq-item.active .faq-answer {
     max-height: 300px!important;
     padding: 15px;
+    opacity: 1;
   }
  
   .description{
@@ -935,7 +941,7 @@ footer .heart {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 5px;
+    padding: 30px;
     flex-wrap:wrap;
     gap: 20px;
 }
@@ -982,10 +988,11 @@ footer .heart {
 .footer-bottom {
     text-align: center;
     margin: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     border-top: 1px solid #444;
-    padding-top: 2px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     font-size: 14px;
 }
 
@@ -1016,8 +1023,7 @@ h2 {
   }
   
   h2:hover {
-    color: #fdbb2d;
-    
+    color: #142d4c;
   }
   h1 {
     font-size: 2.5rem;
