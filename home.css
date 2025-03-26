@@ -337,7 +337,7 @@ body {
     margin-top: 8px;
     font-size: 18px;
     line-height: 1.5;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
   }
   
@@ -1081,7 +1081,7 @@ h2 {
   }
   
   h2:hover {
-    color: #142d4c;
+    color: rgba(245, 245, 245, 0.909);
   }
   h1 {
     font-size: 2.5rem;
