@@ -997,6 +997,7 @@ footer .heart {
 
 .footer-container {
     display: flex;
+    height: 200px;
     justify-content: space-between;
     align-items: flex-start;
     padding: 30px;
