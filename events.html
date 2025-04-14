@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protege - Events</title>
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="bg-image">
+        <div class="navbar">
+            <nav class="container1 header-dark sticky-nav">
+                <a class="active" href="index.html" aria-current="page">
+                    <p class="webtitle">Protégé IGDTUW</p>
+                    <img src="https://ugc.production.linktr.ee/JmiwgCvTQ3GSLSD4v409_jTsTFr71r3y0GYkv?io=true&amp;size=avatar-v3_0"
+                        alt="Logo" class="logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item">🏠 Home</a></li>
+                    <li><a href="events.html" class="nav-item active">📅 Events</a></li>
+                    <li><a href="index.html#faq" class="nav-item">💬 FAQ's</a></li>
+                    <li><a href="index.html#team" class="nav-item">👥 Team</a></li>
+                </ul>
+                <div class="hamburger-menu" onclick="toggleMenu()">
+                    ☰
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <section class="events-section">
+        <h1>Our Events</h1>
+        <div class="events-grid">
+            <!-- Event Card 1 -->
+            <div class="event-card" data-event-name="SpringCode" data-event-description="DSA Mentorship Program"
+                data-event-date="2025" data-event-link="#">
+                <div class="event-poster">
+                    <img src="SpringCode'25.png" alt="SpringCode'25">
+                    <div class="event-overlay">
+                        <p class="event-description">SpringCode: DSA Mentoship Program</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 2 -->
+            <div class="event-card" data-event-name="Resume Revamp 2.0"
+                data-event-description="Resume review sessions to help you perfect your professional profile!"
+                data-event-date="2024" data-event-link="#">
+                <div class="event-poster">
+                    <img src="ResumeRevamp2.0.png" alt="Resume Revamp 2.0">
+                    <div class="event-overlay">
+                        <p class="event-description">Resume Revamp: Resume review sessions to help you perfect your
+                            professional profile!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 3 -->
+            <div class="event-card" data-event-name="DevSprint'21"
+                data-event-description="A 21-day intensive development program where creativity meets collaboration"
+                data-event-date="2021" data-event-link="#">
+                <div class="event-poster">
+                    <img src="DevSprint'21.png" alt="DevSprint'21">
+                    <div class="event-overlay">
+                        <p class="event-description">DevSprint21: A 21-day intensive development program where
+                            creativity meets collaboration🌐</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 4 -->
+            <div class="event-card" data-event-name="CodeSolstice"
+                data-event-description="Where the warmth of mentorship meets the cool precision of coding"
+                data-event-date="2023" data-event-link="#">
+                <div class="event-poster">
+                    <img src="CodeSolstice'23.png" alt="CodeSolstice'23">
+                    <div class="event-overlay">
+                        <p class="event-description">CODESOLSTICE: Where the warmth of mentorship meets the cool
+                            precision of coding 🚀✨</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 5 -->
+            <div class="event-card" data-event-name="PrepPro Coding Challenge"
+                data-event-description="A thrilling adventure designed to unravel the depths of your logical prowess!"
+                data-event-date="2024" data-event-link="#">
+                <div class="event-poster">
+                    <img src="PrepPro Coding Challenge.png" alt="PrepPro Coding Challenge">
+                    <div class="event-overlay">
+                        <p class="event-description">PREP PRO: A thrilling adventure designed to unravel the depths of
+                            your logical prowess!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 6 -->
+            <div class="event-card" data-event-name="Mentober"
+                data-event-description="A month long mentorship program for profile building, interview prep & projects!"
+                data-event-date="2020" data-event-link="#">
+                <div class="event-poster">
+                    <img src="Mentober'2020.png" alt="Mentober">
+                    <div class="event-overlay">
+                        <p class="event-description">Mentober: A month long mentorship program for profile building,
+                            interview prep & projects! ✨</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Event Details Modal -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalEventName"></h2>
+            <p id="modalEventDescription"></p>
+            <p id="modalEventDate"></p>
+            <a href="#" id="modalEventLink" class="btn-more-info">More Information</a>
+        </div>
+    </div>
+
+    <script src="events.js"></script>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
+        }
+    </script>
+</body>
+
+</html>
