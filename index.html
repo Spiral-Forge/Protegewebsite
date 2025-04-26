@@ -7,10 +7,20 @@
     <title>Protégé IGDTUW</title>
     <link rel="icon" type="image/x-icon"
         href="https://ugc.production.linktr.ee/JmiwgCvTQ3GSLSD4v409_jTsTFr71r3y0GYkv?io=true&amp;size=avatar-v3_0">
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="home.css" as="style">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="home.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <!-- Defer non-critical CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" media="print"
+        onload="this.media='all'">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"
+        media="print" onload="this.media='all'" />
+    <noscript>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    </noscript>
 </head>
 
 <body>
@@ -23,11 +33,13 @@
                         alt="Logo" class="logo">
                 </a>
                 <ul class="nav-links">
-                    <li><a href="/index.html" class="nav-item">🏠 Home</a></li>
-                    <li><a href="events.html" class="nav-item">📅 Events</a></li>
-                    <li><a href="#projects" class="nav-item">🚀 Projects</a></li>
-                    <li><a href="#faq" class="nav-item">💬 FAQ's</a></li>
-                    <li><a href="#team" class="nav-item">👥 Team</a></li>
+                    <li><a href="#home" class="nav-item active" data-section="home">🏠 Home</a></li>
+                    <li><a href="#about" class="nav-item active" data-section="about">🧩 About</a></li>
+                    <li><a href="#team" class="nav-item" data-section="team">👥 Team</a></li>
+                    <li><a href="#events" class="nav-item" data-section="events">📅 Events</a></li>
+                    <li><a href="#year-wise-blogs" class="nav-item" data-section="blogs">📝 Blogs</a></li>
+                    <li><a href="#faq" class="nav-item" data-section="faq">💬 FAQ's</a></li>
+
                 </ul>
                 <div class="hamburger-menu" onclick="toggleMenu()">
                     ☰
@@ -41,7 +53,7 @@
             <div class="hero-overlay"></div>
 
             <div class="hero-content">
-                <div class="hero-text">
+                <div class="hero-text" id="home">
                     <h1 class="glitch-text">Welcome To <span>Protégé</span></h1>
                     <p class="neon-subtitle">The Mentorship Society of IGDTUW</p>
                     <p class="cyber-quote">"Innovation distinguishes between a leader and a follower."</p>
@@ -62,7 +74,7 @@
         </div>
 
         <!-- About Us Section -->
-        <section class="about-us">
+        <section class="about-us" id="about">
             <h1 class="text">Why Join Protégé IGDTUW?</h1>
         </section>
 
@@ -127,12 +139,17 @@
 
         <section id="team">
             <div class="container">
-                <div class="header">Meet Our Team</div>
+
+                <section class="team">
+                    <h1 class="text">Meet Our Team</h1>
+                </section>
+                <br><br>
 
                 <div class="team-container">
                     <div class="member-profile">
                         <div class="member-card">
-                            <img src="images/Venus.jpg">
+                            <img src="images/optimized/jpg/images/Venus.jpg" alt="Venus Chaudhary" width="300" height="300"
+                                loading="lazy">
                         </div>
                         <div class="member-name">Venus Chaudhary</div>
                         <div class="position">President</div>
@@ -140,7 +157,8 @@
 
                     <div class="member-profile">
                         <div class="member-card">
-                            <img src="images/Shalini.jpg">
+                            <img src="images/optimized/jpg/images/Shalini.jpg" alt="Shalini Singh" width="300" height="300"
+                                loading="lazy">
                         </div>
                         <div class="member-name">Shalini Singh</div>
                         <div class="position">Tech Lead</div>
@@ -148,7 +166,8 @@
 
                     <div class="member-profile">
                         <div class="member-card">
-                            <img src="images/Aiman.jpg">
+                            <img src="images/optimized/jpg/images/Aiman.jpg" alt="Aiman" width="300" height="300"
+                                loading="lazy">
                         </div>
                         <div class="member-name">Aiman</div>
                         <div class="position">Tech Lead</div>
@@ -156,7 +175,8 @@
 
                     <div class="member-profile">
                         <div class="member-card">
-                            <img src="images/Muskan.jpg">
+                            <img src="images/optimized/jpg/images/Muskan.jpg" alt="Muskan" width="300" height="300"
+                                loading="lazy">
                         </div>
                         <div class="member-name">Muskan</div>
                         <div class="position">Cohort Lead</div>
@@ -216,7 +236,7 @@
 
                     <div class="member-profile">
                         <div class="member-card">
-                            <img src="images/Anushka Gupta.jpg">
+                            <img src="images/Anushka Gupta.jpg" alt="Anushka Gupta">
                         </div>
                         <div class="member-name">Anushka Gupta</div>
                         <div class="position">Coordinator</div>
@@ -335,7 +355,7 @@
 
                     <div class="member-profile">
                         <div class="member-card">
-                            <img src="images/Social Media Team/Bhoomi Verma .jpg">
+                            <img src="images/Social Media Team/Bhoomi Verma .jpg" alt="Bhoomi Verma">
                         </div>
                         <div class="member-name">Bhoomi Verma</div>
                         <div class="position">Coordinator</div>
@@ -377,7 +397,11 @@
                 <div class="team-container">
                     <div class="member-profile">
                         <div class="member-card">
-                            <img src="images/Cohort Team/Aditi Bedi.jpg">
+                            <picture>
+                                <source srcset="images/optimized/webp/Cohort Team/Aditi Bedi.webp" type="image/webp">
+                                <img src="images/optimized/jpg/Cohort Team/Aditi Bedi.jpg" alt="Aditi Bedi" width="300"
+                                    height="300" loading="lazy">
+                            </picture>
                         </div>
                         <div class="member-name">Aditi Bedi</div>
                         <div class="position">Coordinator</div>
@@ -435,7 +459,11 @@
 
                     <div class="member-profile">
                         <div class="member-card">
-                            <img src="images/Cohort Team/Anushree.jpg">
+                            <picture>
+                                <source srcset="images/optimized/webp/Cohort Team/Anushree.webp" type="image/webp">
+                                <img src="images/optimized/jpg/Cohort Team/Anushree.jpg" alt="Anushree" width="300"
+                                    height="300" loading="lazy">
+                            </picture>
                         </div>
                         <div class="member-name">Anushree Gautam</div>
                         <div class="position">Coordinator</div>
@@ -454,19 +482,169 @@
         <!-- </div> -->
         </section>
 
-        <section id="projects" class="hidden-section">
-            <h1>Projects</h1>
-            <h2>Protégé team is working hard for this.</h2>
-            <!-- <div class="grid">
-        <div class="project-item">Project A</div>
-        <div class="project-item">Project B</div>
-        <div class="project-item">Project C</div>
-    </div> -->
+        <section id="events" class="events-section">
+            <section class="events-heading">
+                <h1>Our Events</h1>
+            </section><br><br>
+
+            <div class="events-grid">
+                <!-- Event Card 1 -->
+                <div class="event-card" data-event-name="SpringCode" data-event-description="DSA Mentorship Program"
+                    data-event-date="2025" data-event-link="#">
+                    <div class="event-poster">
+                        <img src="images/optimized/jpg/SpringCode25.jpg" alt="SpringCode'25" width="800"
+                            height="auto" loading="lazy">
+                        <div class="event-overlay">
+                            <p class="event-description">SpringCode: DSA Mentoship Program</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="event-card" data-event-name="Resume Revamp 2.0"
+                    data-event-description="Resume review sessions to help you perfect your professional profile!"
+                    data-event-date="2024" data-event-link="#">
+                    <div class="event-poster">
+                        <img src="images/optimized/jpg/ResumeRevamp2.0.jpg" alt="Resume Revamp 2.0" width="800"
+                            height="auto" loading="lazy">
+                        <div class="event-overlay">
+                            <p class="event-description">Resume Revamp: Resume review sessions to help you perfect your
+                                professional profile!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="event-card" data-event-name="DevSprint'21"
+                    data-event-description="A 21-day intensive development program where creativity meets collaboration"
+                    data-event-date="2021" data-event-link="#">
+                    <div class="event-poster">
+                        <img src="images/optimized/jpg/DevSprint21.jpg" alt="DevSprint'21" width="800"
+                            height="auto" loading="lazy">
+                        <div class="event-overlay">
+                            <p class="event-description">DevSprint21: A 21-day intensive development program where
+                                creativity meets collaboration🌐</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 4 -->
+                <div class="event-card" data-event-name="CodeSolstice"
+                    data-event-description="Where the warmth of mentorship meets the cool precision of coding"
+                    data-event-date="2023" data-event-link="#">
+                    <div class="event-poster">
+                        <img src="images/optimized/jpg/CodeSolstice23.jpg" alt="CodeSolstice'23" width="800"
+                            height="auto" loading="lazy">
+                        <div class="event-overlay">
+                            <p class="event-description">CODESOLSTICE: Where the warmth of mentorship meets the cool
+                                precision of coding 🚀✨</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 5 -->
+                <div class="event-card" data-event-name="PrepPro Coding Challenge"
+                    data-event-description="A thrilling adventure designed to unravel the depths of your logical prowess!"
+                    data-event-date="2024" data-event-link="#">
+                    <div class="event-poster">
+                        <img src="PrepPro Coding Challenge.png" alt="PrepPro Coding Challenge">
+                        <div class="event-overlay">
+                            <p class="event-description">PREP PRO: A thrilling adventure designed to unravel the depths
+                                of your logical prowess!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card 6 -->
+                <div class="event-card" data-event-name="Mentober"
+                    data-event-description="A month long mentorship program for profile building, interview prep & projects!"
+                    data-event-date="2020" data-event-link="#">
+                    <div class="event-poster">
+                        <img src="Mentober'2020.png" alt="Mentober">
+                        <div class="event-overlay">
+                            <p class="event-description">Mentober: A month long mentorship program for profile building,
+                                interview prep & projects! ✨</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <!-- Event Details Modal -->
+        <div id="eventModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 id="modalEventName"></h2>
+                <p id="modalEventDescription"></p>
+                <p id="modalEventDate"></p>
+                <a href="#" id="modalEventLink" class="btn-more-info">More Information</a>
+            </div>
+        </div>
+
+        <script>
+            // Events JS
+            document.addEventListener('DOMContentLoaded', function () {
+                // Add animation delay to each card
+                const cards = document.querySelectorAll('.event-card');
+                cards.forEach((card, index) => {
+                    card.style.animationDelay = `${index * 0.2}s`;
+                });
+
+                // Intersection Observer for better animation timing
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.animationPlayState = 'running';
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                cards.forEach(card => {
+                    observer.observe(card);
+                    card.style.animationPlayState = 'paused';
+
+                    // Add click event listener for modal
+                    card.addEventListener('click', function () {
+                        const eventName = this.getAttribute('data-event-name');
+                        const eventDescription = this.getAttribute('data-event-description');
+                        const eventDate = this.getAttribute('data-event-date');
+                        const eventLink = this.getAttribute('data-event-link');
+
+                        const modal = document.getElementById('eventModal');
+                        const modalEventName = document.getElementById('modalEventName');
+                        const modalEventDescription = document.getElementById('modalEventDescription');
+                        const modalEventDate = document.getElementById('modalEventDate');
+                        const modalEventLink = document.getElementById('modalEventLink');
+
+                        modalEventName.textContent = eventName;
+                        modalEventDescription.textContent = eventDescription;
+                        modalEventDate.textContent = `Year: ${eventDate}`;
+                        modalEventLink.href = eventLink;
+
+                        modal.style.display = 'block';
+                    });
+                });
+
+                // Close modal functionality
+                const closeModal = document.querySelector('.close-modal');
+                const modal = document.getElementById('eventModal');
+
+                closeModal.addEventListener('click', function () {
+                    modal.style.display = 'none';
+                });
+
+                // Close modal when clicking outside
+                window.addEventListener('click', function (event) {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            });
+        </script>
 
         <section id="year-wise-blogs" class="year-wise-blogs">
             <div class="container">
-                <h2 class="section-title">Our Blog Archive</h2>
+                <h1 class="blog-title">Our Blog Archive</h1><br><br>
                 <div class="blog-navigation">
                     <button class="nav-btn active" data-year="2025">2025</button>
                     <button class="nav-btn" data-year="2024">2024</button>
@@ -527,23 +705,29 @@
                                     <span class="date">February 9, 2025</span>
                                 </div>
                                 <div class="blog-item">
-                                    <h4>Part 4: Data Structures in Natural Language Processing (NLP), Algorithms to Applications</h4>
+                                    <h4>Part 4: Data Structures in Natural Language Processing (NLP), Algorithms to
+                                        Applications</h4>
                                     <p>What is Natural Language Processing?</p>
                                     <span class="date">January 21, 2025</span>
                                 </div>
                                 <div class="blog-item">
-                                    <h4>Part 3: Evolution of Data Structures in Cloud Computing, Algorithms to Applications</h4>
+                                    <h4>Part 3: Evolution of Data Structures in Cloud Computing, Algorithms to
+                                        Applications</h4>
                                     <p>What is cloud computing:</p>
                                     <span class="date">January 20, 2025</span>
                                 </div>
                                 <div class="blog-item">
-                                    <h4>Part 2: How Data Structures Power Blockchain and Cryptography, Algorithms to Applications</h4>
-                                    <p>Blockchain and Cryptography are undoubtedly revolutionizing data structures and security of digital devices.</p>
+                                    <h4>Part 2: How Data Structures Power Blockchain and Cryptography, Algorithms to
+                                        Applications</h4>
+                                    <p>Blockchain and Cryptography are undoubtedly revolutionizing data structures and
+                                        security of digital devices.</p>
                                     <span class="date">January 20, 2025</span>
                                 </div>
                                 <div class="blog-item">
-                                    <h4>Part 1: The Role of Data Structures in Search Engines, Algorithms to Applications</h4>
-                                    <p>Most of us study data structures — both theory and practical — implementing stacks, queues, trees, and graphs in countless coding problems...</p>
+                                    <h4>Part 1: The Role of Data Structures in Search Engines, Algorithms to
+                                        Applications</h4>
+                                    <p>Most of us study data structures — both theory and practical — implementing
+                                        stacks, queues, trees, and graphs in countless coding problems...</p>
                                     <span class="date">January 20, 2025</span>
                                 </div>
 
@@ -906,7 +1090,7 @@
 
         <section class="faq" id="faq">
             <div class="faq-container">
-                <h2 class="faq-heading">Frequently Asked Questions</h2>
+                <h1 class="faq-heading">Frequently Asked Questions</h1><br><br>
                 <div class="faq-item" onclick="toggleFAQ(this)">
                     <div class="faq-question">
                         <p><strong>What is Protégé Society?</strong></p>
